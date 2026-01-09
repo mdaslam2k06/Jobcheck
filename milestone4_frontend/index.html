@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobCheck | Fake Job Detection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Main Content Area -->
+    <main>
+        <div class="container">
+            <h1>🔍 JobCheck</h1>
+            <p>Detect Fake Job Posts using specific AI & NLP algorithms.</p>
+
+            <textarea id="jobText" placeholder="Paste the job description here to analyze..."></textarea>
+
+            <button onclick="checkJob()">Analyze Job Post</button>
+
+            <!-- Result Box -->
+            <div id="result"></div>
+
+            <!-- Flag/Feedback Section -->
+            <div id="flag-section" class="hidden"
+                style="margin-top: 20px; border-top: 1px solid #eee; padding-top: 15px;">
+                <p style="font-size: 0.9em; color: #666; margin-bottom: 10px;">Is this result incorrect?</p>
+                <button onclick="showFlagForm()" style="background-color: #ff9800; margin-top: 0;">🚩 Flag as
+                    Incorrect</button>
+
+                <div id="flag-form" class="hidden" style="margin-top: 15px;">
+                    <input type="text" id="flag-reason" placeholder="Why is this incorrect?"
+                        style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
+                    <button onclick="submitFlag()" style="background-color: #d32f2f;">Submit Report</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="footer">
+        &copy; 2025 JobCheck Project. Infosys Springboard Internship.
+    </div>
+
+    <!-- Script at the end for performance -->
+    <script src="script.js"></script>
+    <script>
+        // Inline small fix for the Result box display logic in script.js to match CSS
+        // Overwriting checkJob specific UI logic slightly if needed, but script.js handles innerHTML well.
+        // We just ensure the result div is visible when content is added.
+        const originalCheckJob = checkJob;
+        // logic is mainly in script.js, checking if we need to modify it.
+        // script.js sets innerHTML, which is fine, but we added display:none to #result in CSS.
+        // We need to make sure script.js shows it.
+    </script>
+</body>
+
+</html>
